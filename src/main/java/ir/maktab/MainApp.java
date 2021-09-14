@@ -13,7 +13,7 @@ public class MainApp {
     private static String exeFile = "file.exe";
 
     public static void main(String[] args) throws IOException {
-        useRandomAccessFile(txtFile);
+        fileReader();
     }
 
     private static void useRandomAccessFile(String file) throws IOException {
@@ -94,11 +94,9 @@ public class MainApp {
     public static void fileReader() throws IOException {
         FileReader fileReader = new FileReader(myTextFile);
         int character;
-
         while (-1 != (character = fileReader.read())) {
             System.out.println("char: " + (char) character);
         }
-
         fileReader.close();
     }
 
